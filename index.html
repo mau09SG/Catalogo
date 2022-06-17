@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Catalogo</title>
+    <script type="text/javascript">
+    
+      /* Fecha y Hora By Chivi */ 
+      
+          /* COMIENZA EL SCRIPT DEL RELOJ */ 
+      function actualizaReloj(){  
+      
+          /* CAPTURAMOS LA HORA, LOS MINUTOS Y LOS SEGUNDOS */ 
+      marcacion = new Date()  
+      
+          /* CAPTURAMOS LA HORA */ 
+      Hora = marcacion.getHours()  
+      
+          /* CAPTURAMOS LOS MINUTOS */ 
+      Minutos = marcacion.getMinutes()  
+      
+          /* CAPTURAMOS LOS SEGUNDOS */ 
+      Segundos = marcacion.getSeconds()  
+      
+          /* SI LA HORA, LOS MINUTOS O LOS SEGUNDOS 
+      SIN MENORES O IGUAL A 9, LE AÑADIMOS UN 0 */ 
+      
+      if (Hora<=9) 
+      Hora = "0" + Hora 
+      
+      if (Minutos<=9) 
+      Minutos = "0" + Minutos 
+      
+      if (Segundos<=9) 
+      Segundos = "0" + Segundos 
+          /* TERMINA EL SCRIPT DEL RELOJ */
+      
+          /* COMIENZA EL SCRIPT DE LA FECHA */ 
+      var Dia = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", 
+      
+      "Domingo"); 
+      var Mes = new 
+      
+      Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"); 
+      var Hoy = new Date(); 
+      var Anio = Hoy.getFullYear(); 
+      var Fecha = "" + Dia[Hoy.getDay()] + ", " + Hoy.getDate() + " de " + Mes[Hoy.getMonth()] + " de " + Anio + ". Hora: "; 
+          /* TERMINA EL SCRIPT DE LA FECHA */ 
+      
+          /* CREAMOS 4 VARIABLES PARA DARLE FORMATO A NUESTRO SCRIPT */ 
+      var Inicio, Script, Final, Total 
+      
+          /* EN INICIO LE INDICAMOS UN COLOR DE FUENTE Y UN TAMAÑO */ 
+      Inicio = " " 
+      
+          /* EN RELOJ LE INDICAMOS LA HORA, LOS MINUTOS Y LOS SEGUNDOS */ 
+      Script = Fecha + Hora + ":" + Minutos + ":" + Segundos 
+      
+          /* EN FINAL CERRAMOS EL TAG DE LA FUENTE */ 
+      Final = " " 
+      
+          /* EN TOTAL FINALIZAMOS EL RELOJ UNIENDO LAS VARIABLES */ 
+      Total = Inicio + Script + Final 
+      
+          /* CAPTURAMOS UNA CELDA PARA MOSTRAR EL RELOJ */ 
+      document.getElementById('Fecha_Reloj').innerHTML = Total 
+      
+          /* INDICAMOS QUE NOS REFRESQUE EL RELOJ CADA 1 SEGUNDO */ 
+      setTimeout("actualizaReloj()",1000)  
+      } 
+      
+      </script>
+  </head>
+  <body  onload="actualizaReloj()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Mauricio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Sandoval</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">García</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cátalogo</a>
+          </li>
+          <li class="nav-item">
+            <a href="fechayhora.html" style="text-decoration:none; color:white;" id="Fecha_Reloj"></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="row">
+    <div class="card" style="width: 18rem;">
+      <MARQUEE DIRECTION=right><img class="card-img-top" src="https://c.s-microsoft.com/es-mx/CMSImages/windows10-laptop.png?version=331d3346-be47-623b-c789-95b24578693b" alt="Card image cap"></MARQUEE>
+      <div class="card-body">
+        <h5 class="card-title text-primary h6">Microsoft Windows 10</h5>
+        <p class="card-text text-primary h6">Características.</p>
+      </div>
+      <ul class="list-group list-group-flush ">
+        <li class="list-group-item text-primary h6">El menú inicio</li>
+        <li class="list-group-item text-primary h6">Modo táctil</li>
+        <li class="list-group-item text-primary h6">Las aplicaciones Modern correrán en el escritorio</li>
+        <li class="list-group-item text-primary h6">Escritorios virtuales</li>
+        <li class="list-group-item text-primary h6">Multitarea mejorada</li>
+      </ul>
+      <div class="card-body">
+        <a href="https://www.microsoft.com/es-mx/software-download/windows10" class="card-link text-primary h6">Enlace</a>
+        <a href="#" class="card-link text-primary h6">Gratis</a>
+      </div>
+    </div>
+    
+    <div class="card" style="width: 18rem;">
+      <MARQUEE DIRECTION=left> <img class="card-img-top" src="https://th.bing.com/th/id/R.afd45029903768b0862667f84dbdce2e?rik=NyvGjVE2HZEIwQ&pid=ImgRaw&r=0" alt="Card image cap"></MARQUEE>
+      <div class="card-body">
+        <h5 class="card-title text-secondary font-monospace">Linux</h5>
+        <p class="card-text text-secondary font-monospace">Características.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-secondary font-monospace">Permite acceder a software de libre distribución</li>
+        <li class="list-group-item text-secondary font-monospace">Está centrado en el aprovechamiento de las redes</li>
+        <li class="list-group-item text-secondary font-monospace">Es el sistema operativo preferido por los informáticos</li>
+        <li class="list-group-item text-secondary font-monospace">Brinda soporte a todo tipo de hardware y puede funcionar en múltiples plataformas</li>
+      </ul>
+      <div class="card-body">
+        <a href="https://www.linux.org/pages/download/" class="card-link text-secondary font-monospace">Enlace</a>
+        <a href="#" class="card-link text-secondary font-monospace">Gratis</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <marquee direction="up"><img class="card-img-top" src="https://th.bing.com/th/id/OIP.mtUGBisuKbraMDXgsBys4AHaE2?pid=ImgDet&rs=1" alt="Card image cap"></marquee>
+      <div class="card-body">
+        <h5 class="card-title text-success font-italic">Visual Studio Code</h5>
+        <p class="card-text text-success font-italic">Características.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-success font-italic">Se puede utilizar como lenguajes de programación.</li>
+        <li class="list-group-item text-success font-italic">Visual Studio Code es una herramienta que tiene soporte nativo para gran variedad de lenguajes, entre ellos podemos destacar los principales del desarrollo Web: HTML, CSS, y JavaScript, entre otros.</li>
+        <li class="list-group-item text-success font-italic">Existencia de una amplísima gama de temas o estilos visuales para Visual Studio Code, que hacen el trabajo con el software más agradable a la vista.</li>
+      </ul>
+      <div class="card-body">
+        <a href="https://code.visualstudio.com/" class="card-link text-success font-italic">Enlace</a>
+        <a href="#" class="card-link text-success font-italic">Gratis</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <marquee direction="down"><img class="card-img-top" src="https://th.bing.com/th/id/R.66dac0e5e9d2c65b51ce58f6e88e0ac1?rik=oPmvzYT0bFLFkw&pid=ImgRaw&r=0" alt="Card image cap"></marquee>
+      <div class="card-body">
+        <h5 class="card-title text-danger small">Photoshop</h5>
+        <p class="card-text text-danger small">Características.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-danger small">Conectado a Behance</li>
+        <li class="list-group-item text-danger small">Filtro Smart Sharpen</li>
+        <li class="list-group-item text-danger small">Trabaja con tecnología de generador</li>
+      </ul>
+      <div class="card-body">
+        <a href="https://www.adobe.com/mx/products/photoshop.html?sdid=KQPQY&mv=search&ef_id=a36a79de358a1d2712391b7e15c19341:G:s&s_kwcid=AL!3085!10!78890087855547!78889971767860&msclkid=a36a79de358a1d2712391b7e15c19341" class="card-link text-danger small">Enlace</a>
+        <a href="#" class="card-link text-danger small">$449.00 al mes.</a>
+      </div>
+    </div>
+    
+    <div class="card" style="width: 18rem;">
+      <marquee behavior = "alternate"><img class="card-img-top" src="https://th.bing.com/th/id/R.2094c8344cb59243801be3da8964f59a?rik=9J%2fF10sSl5HOJg&pid=ImgRaw&r=0" alt="Card image cap"></marquee>
+      <div class="card-body">
+        <h5 class="card-title text-warning font-weight-bold">Vuze</h5>
+        <p class="card-text text-warning font-weight-bold">Características.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-warning font-weight-bold">Grabar DVD directamente desde el producto</li>
+        <li class="list-group-item text-warning font-weight-bold">Sin anuncios</li>
+        <li class="list-group-item text-warning font-weight-bold">Reproducir contenido multimedia durante la descarga</li>
+      </ul>
+      <div class="card-body">
+        <a href="http://www.vuze.com/" class="card-link text-warning font-weight-bold">Enlace</a>
+        <a href="#" class="card-link text-warning font-weight-bold">Gratis</a>
+      </div>
+    </div>
+    
+    <div class="card" style="width: 18rem;">
+      <marquee scrollamount="40"><img class="card-img-top" src="https://th.bing.com/th/id/R.2114d860fd419ae117651fe05db800ea?rik=zJ9kKZbDWiejrA&pid=ImgRaw&r=0" alt="Card image cap"></marquee>
+      <div class="card-body">
+        <h5 class="card-title text-info font-weight-normal">Anti-Malware</h5>
+        <p class="card-text text-info font-weight-normal">Características.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-info font-weight-normal">Protección de amenazas en tiempo real</li>
+        <li class="list-group-item text-info font-weight-normal">Copia de seguridad en la nube para PC‡‡, 4</li>
+        <li class="list-group-item text-info font-weight-normal">Firewall inteligente para PC o Firewall para Mac</li>
+        <li class="list-group-item text-info font-weight-normal">Gestor de contraseñas</li>
+        <li class="list-group-item text-info font-weight-normal">100 % Promesa de Protección contra Virus2</li>
+      </ul>
+      <div class="card-body">
+        <a href="https://mx.norton.com/ps/4up_norton360_nav_ns_nd_np_Reading1_tw_nb.html?nortoncountry=mx&om_sem_cid=hho_sem_sy:mx:bng:es:x:br:kw0000004480:73667550836201:c:bing:361014363:1178677308690182:kwd-73667435084068:loc-119&nortoncountry=MX&gclid=1fa26e165f2917e2bcd30cb67c2b9165&gclsrc=3p.ds&msclkid=1fa26e165f2917e2bcd30cb67c2b9165" class="card-link text-info font-weight-normal">Enlace</a>
+        <a href="#" class="card-link text-info font-weight-normal">$249.00</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <marquee scrollamount="80"><img class="card-img-top" src="https://th.bing.com/th/id/R.1d069a0b4812f212a984294593d3df02?rik=6ublNkDqkXMAFw&riu=http%3a%2f%2fwww.mundodigital.net%2fwp-content%2fuploads%2funnamed-79.jpg&ehk=u%2bWc85gHgZRUM%2fOKoDr8i%2fxiOOniX2vbhkhSk7Rtdj8%3d&risl=&pid=ImgRaw&r=0" alt="Card image cap "></marquee>
+      <div class="card-body">
+        <h5 class="card-title text-light bg-dark lead">McAfee</h5>
+        <p class="card-text text-light bg-dark lead">Características.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-light bg-dark lead">Supervisión avanzada</li>
+        <li class="list-group-item text-light bg-dark lead">Privacidad automática</li>
+        <li class="list-group-item text-light bg-dark lead">Orientación personalizada</li>
+      </ul>
+      <div class="card-body">
+        <a href="https://www.mcafee.com/consumer/es-mx/landing-page/direct/sem/mtp-family/desktop/brand-ad.html?csrc=bing&csrcl2=brand&cctype=ES-MX[Search][Brand]%20McAfee&ccstype=&ccoe=direct&ccoel2=sem&pkg_id=521&affid=1487&culture=ES-MX&utm_source=bing&utm_medium=SEM&utm_campaign=[ES-MX][Search][Brand]%20McAfee&utm_content=[brand][exact]%20mcafee&utm_term=mcafee&msclkid=2de9cf2fc8a715e188bbad8fec9efd56" class="card-link text-light bg-dark lead">Enlace</a>
+        <a href="#" class="card-link text-light bg-dark lead">MX$449.95</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <marquee scrollamount="5"> <img class="card-img-top" src="https://th.bing.com/th/id/R.510d9fa1d41f648361973fc54dd3d1b1?rik=aF%2fz%2f5fxS7L1uA&pid=ImgRaw&r=0" alt="Card image cap"></marquee> 
+      <div class="card-body">
+        <h5 class="card-title text-secondary text-left">Access</h5>
+        <p class="card-text text-secondary text-left">Características.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-secondary text-left">Ideal para usuarios individuales y equipos pequeños</li>
+        <li class="list-group-item text-secondary text-left">Más fácil de entender y utilizar que la base de datos cliente-servidor</li>
+        <li class="list-group-item text-secondary text-left">Importación y exportación a otras aplicaciones de Microsoft Office y otras aplicaciones</li>
+      </ul>
+      <div class="card-body">
+        <a href="https://www.microsoft.com/es-mx/microsoft-365/access" class="card-link text-secondary text-left">Enlace</a>
+        <a href="#" class="card-link text-secondary text-left">MXN$1,749.00 al año</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <marquee behavior = "alternate"><img class="card-img-top" src="https://th.bing.com/th/id/R.524508f6d38e33d01b228725e2952388?rik=6nm6x%2fIpaw3xMw&pid=ImgRaw&r=0" alt="Card image cap"></marquee>
+      <div class="card-body">
+        <h5 class="card-title text-danger font-weight-bold">Microsoft Office Picture Manager</h5>
+        <p class="card-text text-danger font-weight-bold">Características.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-danger font-weight-bold">Editar imágenes con la aplicación Fotos en Windows</li>
+        <li class="list-group-item text-danger font-weight-bold">Editar una foto que ha insertado en un documento de Office</li>
+      </ul>
+      <div class="card-body">
+        <a href="https://support.microsoft.com/en-us/office/where-is-picture-manager-58837c3e-34db-4904-95e8-4eca7b7c5730" class="card-link text-danger font-weight-bold">Enlace</a>
+        <a href="#" class="card-link text-danger font-weight-bold">Gratis</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <marquee direction="down"><img class="card-img-top" src="https://th.bing.com/th/id/R.fba21bad7a97d5ee1c3946ddf75c0b12?rik=oTffHq9kJls5Zg&pid=ImgRaw&r=0" alt="Card image cap"></marquee>
+      <div class="card-body">
+        <h5 class="card-title text-warning font-weight-normal">Autocad</h5>
+        <p class="card-text text-warning font-weight-normal">Características.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-warning font-weight-normal">Dibuja y anota geometría 2D y modelos 3D con sólidos, superficies y objetos de malla.</li>
+        <li class="list-group-item text-warning font-weight-normal">Automatiza tareas como, por ejemplo, la comparación de dibujos, el recuento de objetos, la adición de bloques, la creación de planificaciones y mucho más.</li>
+        <li class="list-group-item text-warning font-weight-normal">Crea un espacio de trabajo personalizado para maximizar la productividad con aplicaciones complementarias y API.</li>
+      </ul>
+      <div class="card-body ">
+        <a href="https://www.autodesk.mx/products/autocad/overview?term=3-YEAR&tab=subscription" class="card-link text-warning font-weight-normal">Enlace</a>
+        <a href="#" class="card-link text-warning font-weight-normal">MXN 67,271</a>
+      </div>
+    </div>
+    
+    <div class="card" style="width: 18rem;">
+      <marquee direction="up"> <img class="card-img-top" src="https://th.bing.com/th/id/R.9f75fc116e285405841e97d8770dc2a1?rik=CBwG7%2fnmhfyWHA&pid=ImgRaw&r=0" alt="Card image cap"></marquee>
+      <div class="card-body">
+        <h5 class="card-title  text-danger small">	Corel Draw</h5>
+        <p class="card-text  text-danger small">Características.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item  text-danger small">CorelDRAW X5</li>
+        <li class="list-group-item  text-danger small">Corel PHOTO-PAINT X5</li>
+        <li class="list-group-item  text-danger small">Corel PowerTRACE X5</li>
+      </ul>
+      <div class="card-body">
+        <a href="https://www.coreldraw.com/la/?x-vehicle=ppc_brkws&&msclkid=c3e056f1252218f04151345102a9cf07&utm_source=bing&utm_medium=cpc&utm_campaign=Text_CDGS_CDGS_CD_All_ES_BR_BI_Core_Phrase&utm_term=corel%20draw&utm_content=CD_BR_Core_Core&gclid=c3e056f1252218f04151345102a9cf07&gclsrc=3p.ds" class="card-link  text-danger small">Enlace</a>
+        <a href="#" class="card-link  text-danger small">MXN 6,210.00 /año</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <marquee scrollamount="100"><img class="card-img-top" src="https://media.wired.com/photos/5926d35ccfe0d93c47431806/master/pass/SpotifyHP.jpg" alt="Card image cap"></marquee>
+      <div class="card-body">
+        <h5 class="card-title text-light bg-dark lead">Spotify</h5>
+        <p class="card-text text-light bg-dark lead">Características.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-light bg-dark lead">Obtener música instantánea con Spotify.</li>
+        <li class="list-group-item text-light bg-dark lead">Crear listas de reproducción con Spotify.</li>
+        <li class="list-group-item text-light bg-dark lead">Escuche a Spotify en otros dispositivos. </li>
+        <li class="list-group-item text-light bg-dark lead">Reproducción de archivos locales en Spotify.</li>
+        <li class="list-group-item text-light bg-dark lead">Comparte los nuevos descubrimientos de la música con Spotify.</li>
+      </ul>
+      <div class="card-body">
+        <a href="https://www.spotify.com/mx/premium/?utm_source=mx-es_brand_contextual-desktop_text&utm_medium=paidsearch&utm_campaign=alwayson_latam_mx_premiumbusiness_core_brand+contextual-desktop+text+exact+mx-es+bing&gclid=26955be1e01b1ad292e83943296d4278&gclsrc=3p.ds&msclkid=26955be1e01b1ad292e83943296d4278" class="card-link text-light bg-dark lead">Enlace</a>
+        <a href="#" class="card-link text-light bg-dark lead">$ 115.00 al mes.</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <marquee scrollamount="2"><img class="card-img-top" src="https://androideapk.com/wp-content/uploads/2019/09/Adobe-Acrobat-Reader.jpg" alt="Card image cap"></marquee>
+      <div class="card-body">
+        <h5 class="card-title text-success bg-danger lead">Adobe reader</h5>
+        <p class="card-text text-success bg-danger lead">Características.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-success bg-danger lead">Acerca de. Adobe Reader es un programa para visualizar, imprimir y anotar en documentos en formato PDF.</li>
+        <li class="list-group-item text-success bg-danger lead">PDF. El formato de documentos en PDF corresponde a un estándar.</li>
+        <li class="list-group-item text-success bg-danger lead">Adobe Reader no será distribuido más en openSUSE.</li>
+      </ul>
+      <div class="card-body">
+        <a href="https://www.adobe.com/mx/acrobat/complete-pdf-solution.html?sdid=KARFP&mv=search&ef_id=da71f077cdd01b675bcf92d507853e3f:G:s&s_kwcid=AL!3085!10!79165008505037!79165348541735&msclkid=da71f077cdd01b675bcf92d507853e3f" class="card-link text-success bg-danger lead">Enlace</a>
+        <a href="#" class="card-link text-success bg-danger lead">MXN $299.00/mes</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <marquee direction="down"><img class="card-img-top" src="https://th.bing.com/th/id/R.d9c90fbe84182c9adc6695a3e624cf07?rik=BvXZXCU6Lg4cUQ&pid=ImgRaw&r=0" alt="Card image cap"></marquee>
+      <div class="card-body">
+        <h5 class="card-title text-warning bg-info lead">Skype</h5>
+        <p class="card-text text-warning bg-info lead">Características.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-warning bg-info lead">Se realizan reuniones online</li>
+        <li class="list-group-item text-warning bg-info lead">Mantiene la productividad</li>
+        <li class="list-group-item text-warning bg-info lead">Conexión desde cualquier lugar</li>
+        <li class="list-group-item text-warning bg-info lead">Hacer entrevistas</li>
+        <li class="list-group-item text-warning bg-info lead">Tener un número de teléfono local</li>
+      </ul>
+      <div class="card-body">
+        <a href="https://www.skype.com/es/" class="card-link text-warning bg-info lead">Enlace</a>
+        <a href="#" class="card-link text-warning bg-info lead">Gratis</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <marquee direction="left"> <img class="card-img-top" src="https://th.bing.com/th/id/R.d18965f67033c9ec21b88c5dba151a9b?rik=KsVjjDnKIWLc2Q&riu=http%3a%2f%2fcuatrociencia.unc.edu.ar%2fwp-content%2fblogs.dir%2f38%2ffiles%2fInfo-Stats.jpg&ehk=GFt4aqIY4tJ9Y2arm7jg941AyifAju%2b35Im6UbJNjyU%3d&risl=&pid=ImgRaw&r=0" alt="Card image cap"></marquee>
+      <div class="card-body">
+        <h5 class="card-title text-success bg-light lead">InfoStat</h5>
+        <p class="card-text text-success bg-light lead">Características.</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-success bg-light lead">Software para análisis estadístico de aplicación general desarrollado bajo la plataforma Windows</li>
+        <li class="list-group-item text-success bg-light lead">obtención de estadísticas descriptivas y gráficos para el análisis exploratorio,  como métodos avanzados de modelación estadística y análisis multivariado.</li>
+        <li class="list-group-item text-success bg-light lead">fortalezas es la sencillez de su interfaz combinada con capacidades profesionales para el análisis estadístico y el manejo de datos.</li>
+      </ul>
+      <div class="card-body">
+        <a href="https://www.infostat.com.ar/" class="card-link text-success bg-light lead">Enlace</a>
+        <a href="#" class="card-link text-success bg-light lead">Gratis</a>
+      </div>
+    </div>
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js" ></script>
+  </body>
+</html>
